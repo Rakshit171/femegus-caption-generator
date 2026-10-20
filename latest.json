@@ -1,20 +1,16 @@
 {
  "schema": "fcg.update",
- "version": "0.9.1",
+ "version": "0.9.2",
  "released": "2026-10-20",
  "notes": [
-  "New look \"Clean 4-Word\": plain white text, at most four words per line, with a one-click smooth slide-up animation switch.",
-  "New look \"Soft Editorial\": centred light-sans lines, key words in serif caps / bold glow / bold inline / warm bold / gold glow / serif italic, letter-by-letter reveals.",
-  "Caption looks gallery (section 4): change the whole style in one click; save your own looks.",
-  "Per-word and key-word styling: any installed font, solid or gradient fill, outline and glow, for one word or every occurrence.",
-  "Updates: check for new versions and new looks from inside the app (opt-in).",
-  "Fixes: fill colour hidden by a gradient, layout-specific overrides ignoring \"all layouts\" edits, After Effects reports for relative project folders."
+  "Fix: clicking \"Browse...\" could shut the whole app down on some computers (\"The caption app is not reachable\"). The file dialog now runs separately and can no longer take the app down; if it cannot open, you are told to paste the path instead.",
+  "One clear message when the app has stopped (instead of a pile of identical errors), and a crash log (`work\\app_crash.log`) for support if it ever happens again."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.1/femegus-caption-gen-0.9.1.zip",
-  "sha256": "a504c06efd0a22e914e27f9b1e1f762758c683f4bf93909ca8f0ac75f4801296",
-  "size": 210734,
+  "url": "releases/0.9.2/femegus-caption-gen-0.9.2.zip",
+  "sha256": "c57f20b0ab40abdb8bff579b23872e83c38dc697f5a37701efb47c4056c272a5",
+  "size": 212718,
   "requirements_sha256": "4428e6b2533ce02ffaf1ef7a37ae23d527281b3308c7cb1bf90f9a9acbe93d48"
  },
  "looks": [
