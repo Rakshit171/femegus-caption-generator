@@ -1,0 +1,43 @@
+{
+  "_comment": "Reference look: white support words + large orange gradient accent words with glow; tiers / italic all-caps stack layouts. Every value is editable. Merged over the built-in defaults, so you may delete anything you do not want to change.",
+  "_look": {
+    "title": "Reference (orange glow)",
+    "description": "The original look: white support words, big orange gradient accent words with glow, scattered tiers and italic all-caps stacks. Blur / slide / scale entrances.",
+    "tags": ["bold", "orange", "glow", "tiers"]
+  },
+  "layout": {
+    "template": "auto",
+    "auto_cycle": ["tiers", "tiers", "stack"],
+    "anchor_x": 0.5,
+    "anchor_y": 0.60,
+    "max_width": 0.88,
+    "safe_margin": 0.05,
+    "word_space_em": 0.27,
+    "tiers": { "gap_px": 4, "support_inset_px": 0, "baseline_step_px": 6 },
+    "stack": { "gap_em": -0.04, "x_offsets": [0, 36, -24] }
+  },
+  "roles": {
+    "support": {
+      "font": "ArialMT", "size": 62, "tracking": 0, "caps": "none", "fill": "#FFFFFF",
+      "gradient": { "enabled": false, "top": "#FFFFFF", "bottom": "#DDDDDD" },
+      "stroke": { "width": 0, "color": "#000000" },
+      "shadow": { "enabled": true, "color": "#000000", "opacity": 0.55, "distance": 3, "softness": 6, "direction": 135 },
+      "glow": { "enabled": false },
+      "anim": { "duration": 0.16, "ease": "easeOutSoft", "slide": [0, 12], "scale_from": 1, "opacity_from": 0, "blur_from": 14 }
+    },
+    "accent": {
+      "font": "Arial-BoldMT", "size": 138, "tracking": -2, "caps": "none", "fill": "#F2750C",
+      "gradient": { "enabled": true, "top": "#F98A1F", "bottom": "#EE680A" },
+      "stroke": { "width": 0, "color": "#000000" },
+      "shadow": { "enabled": true, "color": "#000000", "opacity": 0.5, "distance": 5, "softness": 10, "direction": 135 },
+      "glow": { "enabled": true, "color_a": "#F2750C", "color_b": "#E8500A", "radius": 24, "intensity": 0.8 },
+      "anim": { "duration": 0.22, "ease": "easeOut", "slide": [-70, 0], "scale_from": 1.12, "opacity_from": 0, "blur_from": 10 }
+    }
+  },
+  "template_styles": {
+    "stack": {
+      "support": { "font": "Arial-BoldItalicMT", "size": 92, "caps": "upper", "anim": { "slide": [0, 16] } },
+      "accent": { "font": "Arial-BoldItalicMT", "size": 128, "caps": "upper", "tracking": -3, "fill": "#F5A020", "gradient": { "enabled": true, "top": "#F8B232", "bottom": "#F08A14" }, "anim": { "slide": [0, 20], "scale_from": 1.1 } }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "_comment": "Look 3 — 'Clean 4-Word': plain white text, at most four words per line on ONE line, every word appears exactly when it is spoken. Animation is OFF in the saved style (plain text); the 'toggle' block below is what the one-click switch in section 4 applies: a smooth slide-up of every word. The 'grouping' block is applied while this look is active (never changes when a word appears).",
+  "_look": {
+    "title": "Clean 4-Word",
+    "description": "Plain white text, four words per line, each word appears as it is spoken. One click adds a smooth slide-up animation.",
+    "tags": ["plain", "4 words", "one line", "optional slide-up"],
+    "toggle": {
+      "label": "Smooth slide-up animation",
+      "hint": "Every word glides up into place the moment it is spoken (soft ease-out, no bounce).",
+      "on": {
+        "roles": {
+          "support": { "anim": { "unit": "word", "duration": 0.45, "ease": [0.22, 1, 0.36, 1], "slide": [0, 42], "scale_from": 1, "opacity_from": 0, "blur_from": 0 } },
+          "accent":  { "anim": { "unit": "word", "duration": 0.45, "ease": [0.22, 1, 0.36, 1], "slide": [0, 42], "scale_from": 1, "opacity_from": 0, "blur_from": 0 } }
+        }
+      },
+      "off": {
+        "roles": {
+          "support": { "anim": { "unit": "word", "duration": 0, "ease": "easeOut", "slide": [0, 0], "scale_from": 1, "opacity_from": 1, "blur_from": 0 } },
+          "accent":  { "anim": { "unit": "word", "duration": 0, "ease": "easeOut", "slide": [0, 0], "scale_from": 1, "opacity_from": 1, "blur_from": 0 } }
+        }
+      }
+    }
+  },
+  "grouping": { "min_words": 2, "target_words": 4, "max_words": 4, "max_chars": 60, "max_duration_s": 5.0, "w_size": 6.0 },
+  "layout": {
+    "template": "centered",
+    "anchor_x": 0.5,
+    "anchor_y": 0.7,
+    "max_width": 0.88,
+    "safe_margin": 0.05,
+    "word_space_em": 0.26,
+    "centered": { "gap_em": 0.1, "gap_px": 0, "wrap": false }
+  },
+  "template_styles": {},
+  "roles": {
+    "support": {
+      "font": "Satoshi-Bold", "font_fallbacks": ["Poppins-SemiBold", "NeueMontreal-Bold", "Arial-BoldMT"],
+      "size": 60, "tracking": -10, "caps": "none", "fill": "#FFFFFF", "line": "inline",
+      "gradient": { "enabled": false, "top": "#FFFFFF", "bottom": "#DDDDDD" },
+      "stroke": { "width": 0, "color": "#000000" },
+      "shadow": { "enabled": true, "color": "#000000", "opacity": 0.45, "distance": 3, "softness": 10, "direction": 135 },
+      "glow": { "enabled": false },
+      "anim": { "unit": "word", "duration": 0, "ease": "easeOut", "slide": [0, 0], "scale_from": 1, "opacity_from": 1, "blur_from": 0 }
+    },
+    "accent": {
+      "font": "Satoshi-Bold", "font_fallbacks": ["Poppins-SemiBold", "NeueMontreal-Bold", "Arial-BoldMT"],
+      "size": 60, "tracking": -10, "caps": "none", "fill": "#FFFFFF", "line": "inline",
+      "gradient": { "enabled": false, "top": "#FFFFFF", "bottom": "#DDDDDD" },
+      "stroke": { "width": 0, "color": "#000000" },
+      "shadow": { "enabled": true, "color": "#000000", "opacity": 0.45, "distance": 3, "softness": 10, "direction": 135 },
+      "glow": { "enabled": false },
+      "anim": { "unit": "word", "duration": 0, "ease": "easeOut", "slide": [0, 0], "scale_from": 1, "opacity_from": 1, "blur_from": 0 }
+    }
+  }
+}

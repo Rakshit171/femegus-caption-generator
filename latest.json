@@ -1,0 +1,46 @@
+{
+ "schema": "fcg.update",
+ "version": "0.9.1",
+ "released": "2026-10-20",
+ "notes": [
+  "New look \"Clean 4-Word\": plain white text, at most four words per line, with a one-click smooth slide-up animation switch.",
+  "New look \"Soft Editorial\": centred light-sans lines, key words in serif caps / bold glow / bold inline / warm bold / gold glow / serif italic, letter-by-letter reveals.",
+  "Caption looks gallery (section 4): change the whole style in one click; save your own looks.",
+  "Per-word and key-word styling: any installed font, solid or gradient fill, outline and glow, for one word or every occurrence.",
+  "Updates: check for new versions and new looks from inside the app (opt-in).",
+  "Fixes: fill colour hidden by a gradient, layout-specific overrides ignoring \"all layouts\" edits, After Effects reports for relative project folders."
+ ],
+ "min_python": "3.10",
+ "app": {
+  "url": "releases/0.9.1/femegus-caption-gen-0.9.1.zip",
+  "sha256": "a504c06efd0a22e914e27f9b1e1f762758c683f4bf93909ca8f0ac75f4801296",
+  "size": 210734,
+  "requirements_sha256": "4428e6b2533ce02ffaf1ef7a37ae23d527281b3308c7cb1bf90f9a9acbe93d48"
+ },
+ "looks": [
+  {
+   "name": "clean_four_words",
+   "title": "Clean 4-Word",
+   "url": "looks/clean_four_words.json",
+   "sha256": "bdcd834c5021a2a48bf37ddde7917b78265186f5055e2f064d3ae9b80e9015e6"
+  },
+  {
+   "name": "clean_poppins",
+   "title": "Clean Poppins",
+   "url": "looks/clean_poppins.json",
+   "sha256": "5af71f0bc7b1f2a2dac2c57dfc284f76988f8be2a8b65caa65386c90283c3830"
+  },
+  {
+   "name": "reference_style",
+   "title": "Reference (orange glow)",
+   "url": "looks/reference_style.json",
+   "sha256": "ed0145b319d9e89b4d06d90c18e805a7e6fce9cd7cdd3d563bcc9ad1cc855e9a"
+  },
+  {
+   "name": "soft_editorial",
+   "title": "Soft Editorial",
+   "url": "looks/soft_editorial.json",
+   "sha256": "014ef447a1b2291c3208e21d5392b06119112d847d77adef3bd92c9df470f16d"
+  }
+ ]
+}

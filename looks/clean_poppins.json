@@ -1,0 +1,30 @@
+{
+  "_comment": "Second preset (proves everything is data): Poppins, yellow accent with cyan support, no glow, bouncy overshoot entrance, single stacked layout, higher placement.",
+  "_look": {
+    "title": "Clean Poppins",
+    "description": "One word per line in Poppins: yellow accents over cyan support words, bouncy overshoot entrance.",
+    "tags": ["poppins", "bounce", "stack"]
+  },
+  "layout": { "template": "stack", "anchor_y": 0.58, "stack": { "gap_em": 0.0, "x_offsets": [0] } },
+  "roles": {
+    "support": {
+      "font": "Poppins-Medium", "size": 70, "fill": "#7FE7FF", "tracking": 10,
+      "shadow": { "enabled": true, "color": "#000000", "opacity": 0.7, "distance": 4, "softness": 8, "direction": 120 },
+      "anim": { "duration": 0.30, "ease": "overshoot", "slide": [0, 30], "scale_from": 0.8, "opacity_from": 0, "blur_from": 0 }
+    },
+    "accent": {
+      "font": "Poppins-Bold", "size": 120, "fill": "#FFE600", "tracking": 0,
+      "gradient": { "enabled": false },
+      "glow": { "enabled": false },
+      "stroke": { "width": 0, "color": "#000000" },
+      "shadow": { "enabled": true, "color": "#000000", "opacity": 0.7, "distance": 6, "softness": 12, "direction": 120 },
+      "anim": { "duration": 0.35, "ease": "overshoot", "slide": [0, 40], "scale_from": 0.7, "opacity_from": 0, "blur_from": 0 }
+    }
+  },
+  "template_styles": {
+    "stack": {
+      "support": { "font": "Poppins-Medium", "size": 70, "caps": "none", "anim": { "slide": [0, 30] } },
+      "accent": { "font": "Poppins-Bold", "size": 120, "caps": "none", "tracking": 0, "anim": { "slide": [0, 40], "scale_from": 0.7 } }
+    }
+  }
+}
