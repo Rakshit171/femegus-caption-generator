@@ -1,19 +1,16 @@
 {
  "schema": "fcg.update",
- "version": "0.9.4",
+ "version": "0.9.5",
  "released": "2026-10-23",
  "notes": [
-  "Fix: Transcribe failing with \"unexpected keyword argument 'metadata_errors'\" on some computers. Differing PyAV versions are tolerated, only tested library versions are installed, and errors now say what to do.",
-  "Fix: a graphics-card failure in the middle of a transcription now continues on the processor instead of stopping.",
-  "Fix: after Update the button came back with no confirmation. Now: \"Update installed — restart to finish\" with a Restart now button, and Check for updates always says whether you have the latest version.",
-  "New: Repair components and Copy support info buttons (section 10); the System check warns about components that differ from the tested versions.",
-  "If you are on 0.9.3 or older: after this update close the black window and start the app again once; later restarts are one click."
+  "New: delete recent projects to free disk space (section 1). Each project shows its size; tick one or more and press Delete selected. Only the tool's saved work is removed — your video/audio files and After Effects are never touched.",
+  "Fix: a project with a damaged transcript no longer disappears from the Recent projects list."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.4/femegus-caption-gen-0.9.4.zip",
-  "sha256": "0953f48dbd3f2537625fb9725cacab267befcbdf4d35ff53d186fbb862a480f6",
-  "size": 230182,
+  "url": "releases/0.9.5/femegus-caption-gen-0.9.5.zip",
+  "sha256": "e106ce9519bef26212adc1bdb6094d05b2adc0b157ab32a805894b8a71ded843",
+  "size": 234041,
   "requirements_sha256": "115e6368d5bf3a7074cc0fef1c37b2fc29fcc25091e4b884c76b90cf54310bd3"
  },
  "looks": [
