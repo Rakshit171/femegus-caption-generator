@@ -1,16 +1,17 @@
 {
  "schema": "fcg.update",
- "version": "0.9.5",
- "released": "2026-10-23",
+ "version": "0.9.6",
+ "released": "2026-10-24",
  "notes": [
-  "New: delete recent projects to free disk space (section 1). Each project shows its size; tick one or more and press Delete selected. Only the tool's saved work is removed — your video/audio files and After Effects are never touched.",
-  "Fix: a project with a damaged transcript no longer disappears from the Recent projects list."
+  "Fix: captions missing for the first seconds of a clip (seen with Hinglish on clips cut mid-sentence; English uses the same safety net). Missing starts are now found, refilled from a second decoding pass and, if needed, by decoding the first seconds again.",
+  "New: download your captions as an .srt subtitle file (section 10): one cue per caption, or a word-by-word build-up. It shows the cue count and the first cues before you download.",
+  "Unfillable gaps at the very start are now marked red on the timeline from 0.6 s (before: 1.5 s), so you can listen and add the words."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.5/femegus-caption-gen-0.9.5.zip",
-  "sha256": "e106ce9519bef26212adc1bdb6094d05b2adc0b157ab32a805894b8a71ded843",
-  "size": 234041,
+  "url": "releases/0.9.6/femegus-caption-gen-0.9.6.zip",
+  "sha256": "5ff3573d7480c0c13b12d65135a63a4507c81a62e02e2ad5ca21d0ffced68efe",
+  "size": 240741,
   "requirements_sha256": "115e6368d5bf3a7074cc0fef1c37b2fc29fcc25091e4b884c76b90cf54310bd3"
  },
  "looks": [
