@@ -1,19 +1,16 @@
 {
  "schema": "fcg.update",
- "version": "0.9.7",
- "released": "2026-10-24",
+ "version": "0.9.8",
+ "released": "2026-10-25",
  "notes": [
-  "Fix: spoken amounts lost inside Hindi sentences (\"agar 40,000 ya 50,000 rupees … toh kal mujhe 5 lakh rupees\" came out as \"agar ya rupees … mujhe rupe\"). Numbers are now kept, and an amount that may have lost its number is flagged instead of silently missing.",
-  "Fix: English words in a stretch the first pass skipped now come from the stock model (\"story sells\", not \"story cells\"); a Hindi stretch the Hinglish model skipped is asked again so the first words (\"Stories batao\") are no longer left out.",
-  "New: Hinglish text polish (section 2): one spelling per word (voh, yeh, toh, nahin, tumhaare, theek…), \"paanch laakh\" → \"5 lakh\", question marks only for real questions, sentence capitals. Every change is listed and it can be switched off.",
-  "New: Hinglish regression suite with measurements (scripts/hinglish_eval.py) and the writing convention in docs/HINGLISH_STYLE.md.",
-  "Fix: a stray \"null\" text under the transcript table (and in other panels) is gone."
+  "New: one-click fixes in the system check (section 10). If a speech model or component is missing, a Fix button appears next to it (download the English model, set up the Hinglish model, GPU libraries, repair), plus \"Fix everything\", with progress and Cancel.",
+  "Improved: the system check now notices an incomplete model download and a Hinglish model that is present but not connected."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.7/femegus-caption-gen-0.9.7.zip",
-  "sha256": "e36441504b54ba1c07e9fc50672a3abee14d30b92686a1e830c34cc104e156a3",
-  "size": 268171,
+  "url": "releases/0.9.8/femegus-caption-gen-0.9.8.zip",
+  "sha256": "ebcf8fbeb294af9c6e225170ec74824938a756335c7dc2c3460d606924612b2d",
+  "size": 275686,
   "requirements_sha256": "115e6368d5bf3a7074cc0fef1c37b2fc29fcc25091e4b884c76b90cf54310bd3"
  },
  "looks": [
