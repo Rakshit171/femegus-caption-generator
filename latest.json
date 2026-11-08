@@ -1,19 +1,17 @@
 {
  "schema": "fcg.update",
- "version": "0.9.9",
- "released": "2026-11-08",
+ "version": "0.9.10",
+ "released": "2026-11-09",
  "notes": [
-  "Fix: Hinglish captions with no Hindi words. Two causes: the speech model sometimes translated a spoken Hindi sentence into English (so no Hindi was found), and the Hinglish model sometimes got stuck repeating itself (\"vah, vah, vah…\"), which left whole stretches of Hindi out of the captions. Both are now detected and those stretches are decoded again. Restart the app and transcribe the clip again to get the corrected text.",
-  "Fix: Automatic language now also notices Hindi that the speech model translated into English, so a Hinglish clip is no longer treated as English.",
-  "Fix: random words flashing on screen for a few frames. Runs of words squeezed into a few hundredths of a second (a repeated phrase the speech model invented) are left out of the captions and listed under \"Excluded\", where you can bring a word back.",
-  "New: Clean 4-Word look gets two options (both off by default): \"Whole line at once\" (the line appears together when its first word is spoken) and \"Solid box behind the text\" (any colour, opacity, padding, corner roundness; a separate editable shape layer in After Effects).",
-  "Improved: the After Effects read-back check understands the new options."
+  "Fix: Hinglish sentences captioned in English instead of what was said (\"bahut zyada overcrowded hai\" came out as \"is a lot of overcrowded\"). The tool now notices when the speech model translated Hindi, asks the Hinglish model again for those few seconds and keeps the answer that two passes agree on.",
+  "Fix: words missing from Hinglish captions (\"out in this market you\", \"master karna hai\"). A single common word such as \"jo\" no longer counts as proof of Hindi, a replacement is refused when it would drop most of the words the first pass heard, and each Hindi stretch is decoded again on its own.",
+  "Known limit: the speech model is not repeatable, so now and then a Hindi stretch still comes out garbled or loses a word (\"hai\"). If you see that, transcribe once more or fix the word in the transcript table."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.9/femegus-caption-gen-0.9.9.zip",
-  "sha256": "06c31a3c4e96314c4d93226e6baae956fadc46f9393cfe626ca393a5c0667dfe",
-  "size": 294800,
+  "url": "releases/0.9.10/femegus-caption-gen-0.9.10.zip",
+  "sha256": "7a3a579cf2ea2ad6ccfd4b5542691be6243efe925ba47cd01e3d42feb4d4b715",
+  "size": 300341,
   "requirements_sha256": "115e6368d5bf3a7074cc0fef1c37b2fc29fcc25091e4b884c76b90cf54310bd3"
  },
  "looks": [
