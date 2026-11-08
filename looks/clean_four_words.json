@@ -19,9 +19,34 @@
           "accent":  { "anim": { "unit": "word", "duration": 0, "ease": "easeOut", "slide": [0, 0], "scale_from": 1, "opacity_from": 1, "blur_from": 0 } }
         }
       }
-    }
+    },
+    "options": [
+      {
+        "id": "line",
+        "label": "Whole line at once",
+        "hint": "Off (default): every word appears as the speaker says it. On: the whole line appears together the moment its FIRST word is spoken and stays as it is — the later words of the line are shown slightly before they are said.",
+        "on": { "reveal": { "mode": "line" } },
+        "off": { "reveal": { "mode": "word" } }
+      },
+      {
+        "id": "box",
+        "label": "Solid box behind the text",
+        "hint": "A plain filled rectangle behind each line (a separate, editable shape layer in After Effects). Pick any colour.",
+        "on": { "box": { "enabled": true } },
+        "off": { "box": { "enabled": false } },
+        "controls": [
+          { "path": "box.color", "type": "color", "label": "Box colour" },
+          { "path": "box.opacity", "type": "number", "label": "Opacity (0–1)", "min": 0, "max": 1, "step": 0.05 },
+          { "path": "box.pad_x", "type": "number", "label": "Padding left/right (px)", "min": 0, "max": 200, "step": 2 },
+          { "path": "box.pad_y", "type": "number", "label": "Padding top/bottom (px)", "min": 0, "max": 200, "step": 2 },
+          { "path": "box.radius", "type": "number", "label": "Corner roundness (px)", "min": 0, "max": 200, "step": 2 }
+        ]
+      }
+    ]
   },
   "grouping": { "min_words": 2, "target_words": 4, "max_words": 4, "max_chars": 60, "max_duration_s": 5.0, "w_size": 6.0 },
+  "reveal": { "mode": "word" },
+  "box": { "enabled": false, "color": "#000000", "opacity": 0.85, "pad_x": 28, "pad_y": 14, "radius": 16, "ascent_em": 0.8, "descent_em": 0.25 },
   "layout": {
     "template": "centered",
     "anchor_x": 0.5,

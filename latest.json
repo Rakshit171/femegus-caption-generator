@@ -1,16 +1,19 @@
 {
  "schema": "fcg.update",
- "version": "0.9.8",
- "released": "2026-10-25",
+ "version": "0.9.9",
+ "released": "2026-11-08",
  "notes": [
-  "New: one-click fixes in the system check (section 10). If a speech model or component is missing, a Fix button appears next to it (download the English model, set up the Hinglish model, GPU libraries, repair), plus \"Fix everything\", with progress and Cancel.",
-  "Improved: the system check now notices an incomplete model download and a Hinglish model that is present but not connected."
+  "Fix: Hinglish captions with no Hindi words. Two causes: the speech model sometimes translated a spoken Hindi sentence into English (so no Hindi was found), and the Hinglish model sometimes got stuck repeating itself (\"vah, vah, vah…\"), which left whole stretches of Hindi out of the captions. Both are now detected and those stretches are decoded again. Restart the app and transcribe the clip again to get the corrected text.",
+  "Fix: Automatic language now also notices Hindi that the speech model translated into English, so a Hinglish clip is no longer treated as English.",
+  "Fix: random words flashing on screen for a few frames. Runs of words squeezed into a few hundredths of a second (a repeated phrase the speech model invented) are left out of the captions and listed under \"Excluded\", where you can bring a word back.",
+  "New: Clean 4-Word look gets two options (both off by default): \"Whole line at once\" (the line appears together when its first word is spoken) and \"Solid box behind the text\" (any colour, opacity, padding, corner roundness; a separate editable shape layer in After Effects).",
+  "Improved: the After Effects read-back check understands the new options."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.8/femegus-caption-gen-0.9.8.zip",
-  "sha256": "ebcf8fbeb294af9c6e225170ec74824938a756335c7dc2c3460d606924612b2d",
-  "size": 275686,
+  "url": "releases/0.9.9/femegus-caption-gen-0.9.9.zip",
+  "sha256": "06c31a3c4e96314c4d93226e6baae956fadc46f9393cfe626ca393a5c0667dfe",
+  "size": 294800,
   "requirements_sha256": "115e6368d5bf3a7074cc0fef1c37b2fc29fcc25091e4b884c76b90cf54310bd3"
  },
  "looks": [
@@ -18,7 +21,7 @@
    "name": "clean_four_words",
    "title": "Clean 4-Word",
    "url": "looks/clean_four_words.json",
-   "sha256": "bdcd834c5021a2a48bf37ddde7917b78265186f5055e2f064d3ae9b80e9015e6"
+   "sha256": "2bdee336203c6dccf9568ca4c7452d1d17367f234a800032b5573968af411f17"
   },
   {
    "name": "clean_poppins",
