@@ -1,18 +1,15 @@
 {
  "schema": "fcg.update",
- "version": "0.9.13",
+ "version": "0.9.14",
  "released": "2026-11-09",
  "notes": [
-  "Fix: every computer now builds exactly the same Hinglish model as the tested one. The Hinglish setup used to install the newest conversion tools, so other computers could end up with a slightly different model; the tool versions and the model version are now fixed (checked: the result is byte-for-byte identical). The system check shows \"not the tested build\" with a Rebuild button if an older setup made a different one.",
-  "Fix: Hinglish on graphics cards with little free memory. Hinglish uses two speech models; when the card is short of memory they now take turns on it instead of overflowing into normal memory, which made it very slow. Same models, same results.",
-  "Fix: on slow computers (for example without a usable NVIDIA card) the extra accuracy checks could run twice as long as their time limit. They now stop on time.",
-  "Improved: the progress text tells how long the Hinglish pass will take on this computer and how long the extra checks may take at most."
+  "New: **Deep check** (section 10, next to Run system check). The system check only looks at files; the deep check really runs both speech models on the first 20 seconds of the open video (or a spoken test sentence) and shows, step by step, what works, what fails or is slow, whether the graphics card or only the processor does the work, and how long a 1-minute Hinglish clip will take on this computer. A step that waits instead of working is stopped after 3 minutes and named, with a report of where it was waiting. \"Copy report\" gives a text to send for help (it is also included in \"Copy support info\"). Takes 2–10 minutes and changes nothing."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.13/femegus-caption-gen-0.9.13.zip",
-  "sha256": "ac88423c9eef709d754d79a8d2d3732502d24efd4c26319e0cfb35857d2c13b7",
-  "size": 1280932,
+  "url": "releases/0.9.14/femegus-caption-gen-0.9.14.zip",
+  "sha256": "a3cdfdacb74ca5717271b866de547c7e51a3883dd9d8c2c6c7c3cf6f2252ff3a",
+  "size": 1291674,
   "requirements_sha256": "115e6368d5bf3a7074cc0fef1c37b2fc29fcc25091e4b884c76b90cf54310bd3"
  },
  "looks": [
