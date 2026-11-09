@@ -1,18 +1,18 @@
 {
  "schema": "fcg.update",
- "version": "0.9.12",
+ "version": "0.9.13",
  "released": "2026-11-09",
  "notes": [
-  "Fix: Hinglish transcription stuck with the graphics card and processor both idle (English worked). If a file of the Hinglish model's folder (for example tokenizer.json) was missing, the speech engine silently waited for the internet, for minutes when the connection was blocked or slow. The folder is now checked before it is used, a missing small file is put back from a copy inside the app (nothing is downloaded, the model itself is unchanged), and a folder that cannot be repaired is reported in plain words instead of waiting.",
-  "Fix: the speech model that is already downloaded is now loaded from the computer only, without first asking the internet whether a newer version exists. A slow or blocked connection no longer delays it.",
-  "New: the progress text now names what the program is doing (\"Loading the speech model from disk\", \"Pass 2: the Hinglish model is listening…\", \"Extra check 1…\"). If nothing happens for 90 s it says which step it is waiting in, and after 2 minutes it saves a report to work\\stall_trace.txt that 'Copy support info' (section 10) includes, so a stall can be pinned down.",
-  "Improved: the system check shows \"Hinglish model incomplete\" with a one-click Fix (no download) when such a file is missing."
+  "Fix: every computer now builds exactly the same Hinglish model as the tested one. The Hinglish setup used to install the newest conversion tools, so other computers could end up with a slightly different model; the tool versions and the model version are now fixed (checked: the result is byte-for-byte identical). The system check shows \"not the tested build\" with a Rebuild button if an older setup made a different one.",
+  "Fix: Hinglish on graphics cards with little free memory. Hinglish uses two speech models; when the card is short of memory they now take turns on it instead of overflowing into normal memory, which made it very slow. Same models, same results.",
+  "Fix: on slow computers (for example without a usable NVIDIA card) the extra accuracy checks could run twice as long as their time limit. They now stop on time.",
+  "Improved: the progress text tells how long the Hinglish pass will take on this computer and how long the extra checks may take at most."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.12/femegus-caption-gen-0.9.12.zip",
-  "sha256": "f94dbde79c993083f2597f26b549162a88c548e8588f8c80c9e617701f84bf45",
-  "size": 1273355,
+  "url": "releases/0.9.13/femegus-caption-gen-0.9.13.zip",
+  "sha256": "ac88423c9eef709d754d79a8d2d3732502d24efd4c26319e0cfb35857d2c13b7",
+  "size": 1280932,
   "requirements_sha256": "115e6368d5bf3a7074cc0fef1c37b2fc29fcc25091e4b884c76b90cf54310bd3"
  },
  "looks": [
