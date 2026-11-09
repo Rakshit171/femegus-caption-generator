@@ -1,17 +1,16 @@
 {
  "schema": "fcg.update",
- "version": "0.9.10",
+ "version": "0.9.11",
  "released": "2026-11-09",
  "notes": [
-  "Fix: Hinglish sentences captioned in English instead of what was said (\"bahut zyada overcrowded hai\" came out as \"is a lot of overcrowded\"). The tool now notices when the speech model translated Hindi, asks the Hinglish model again for those few seconds and keeps the answer that two passes agree on.",
-  "Fix: words missing from Hinglish captions (\"out in this market you\", \"master karna hai\"). A single common word such as \"jo\" no longer counts as proof of Hindi, a replacement is refused when it would drop most of the words the first pass heard, and each Hindi stretch is decoded again on its own.",
-  "Known limit: the speech model is not repeatable, so now and then a Hindi stretch still comes out garbled or loses a word (\"hai\"). If you see that, transcribe once more or fix the word in the transcript table."
+  "Fix: Hinglish transcription seeming stuck at one percentage (for example 35 %) on slower computers. The extra accuracy checks added in 0.9.9 and 0.9.10 can take several times longer than the transcription itself on a slow PC. They now have a time limit based on how fast your computer is, so the transcript always finishes; anything skipped is listed in a warning. On a fast computer nothing is skipped and the result is the same as before.",
+  "Improved: the progress bar keeps moving while those extra checks run, instead of standing still."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.10/femegus-caption-gen-0.9.10.zip",
-  "sha256": "7a3a579cf2ea2ad6ccfd4b5542691be6243efe925ba47cd01e3d42feb4d4b715",
-  "size": 300341,
+  "url": "releases/0.9.11/femegus-caption-gen-0.9.11.zip",
+  "sha256": "b65e8588caad095ecd7e2214ecbf74ffdbfcc18a6590402b43993f06bc25bbad",
+  "size": 303085,
   "requirements_sha256": "115e6368d5bf3a7074cc0fef1c37b2fc29fcc25091e4b884c76b90cf54310bd3"
  },
  "looks": [
