@@ -1,15 +1,17 @@
 {
  "schema": "fcg.update",
- "version": "0.9.14",
- "released": "2026-11-09",
+ "version": "0.9.15",
+ "released": "2026-11-11",
  "notes": [
-  "New: **Deep check** (section 10, next to Run system check). The system check only looks at files; the deep check really runs both speech models on the first 20 seconds of the open video (or a spoken test sentence) and shows, step by step, what works, what fails or is slow, whether the graphics card or only the processor does the work, and how long a 1-minute Hinglish clip will take on this computer. A step that waits instead of working is stopped after 3 minutes and named, with a report of where it was waiting. \"Copy report\" gives a text to send for help (it is also included in \"Copy support info\"). Takes 2–10 minutes and changes nothing."
+  "Fix: Hinglish freezing on computers whose NVIDIA graphics card is missing its CUDA libraries (\"cublas64_12.dll is not found\"). The card was used anyway, the first speech model failed over to the processor, and the Hinglish model then froze. The app now checks for those libraries before it uses the card: if they are missing it uses the processor from the start (slower, but it finishes), and after any graphics-card failure it never tries the card again until the app is restarted.",
+  "Fix: the system check now notices a graphics card whose CUDA libraries are missing (it used to say \"GPU ready\") and offers \"Install the GPU libraries\".",
+  "New: every problem the Deep check finds has a Fix button, plus \"Fix everything found\" (graphics-card libraries, component repair, speech model download, Hinglish model rebuild). Run the Deep check again afterwards to confirm."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.14/femegus-caption-gen-0.9.14.zip",
-  "sha256": "a3cdfdacb74ca5717271b866de547c7e51a3883dd9d8c2c6c7c3cf6f2252ff3a",
-  "size": 1291674,
+  "url": "releases/0.9.15/femegus-caption-gen-0.9.15.zip",
+  "sha256": "2a872c8286b5a29386c902f3ad659f89bc5b646ee23132d10cfb2e918df34577",
+  "size": 1295766,
   "requirements_sha256": "115e6368d5bf3a7074cc0fef1c37b2fc29fcc25091e4b884c76b90cf54310bd3"
  },
  "looks": [
