@@ -1,5 +1,5 @@
 {
-  "_comment": "Look 2 — 'Soft Editorial' (modelled on reference/look2/Video-34323.mp4): light grotesque lines, centred, with key words switching to serif caps / bold glow / bold inline / warm bold / gold glow / serif italic. Support words sharpen out of a blur while rising; serif and glow accents reveal LETTER BY LETTER (blur + pink tint settling to white). Hard-cut exits. Everything is editable data; this file only holds what differs from the reference look ('template_styles' always replaces the reference look's, here with none).",
+  "_comment": "Look 2 — 'Soft Editorial' (modelled on reference/look2/Video-34323.mp4): light grotesque lines, centred, with key words switching to serif caps / bold glow / bold inline / warm bold / gold glow / serif italic. Support words sharpen out of a blur while rising; serif and glow accents reveal LETTER BY LETTER (blur + pink tint settling to white). Hard-cut exits. Motion = 'silk' (2026-11-19): each property has its own length/curve under anim.channels (quick soft-start fade, ~1 s exponential slide); see docs/STYLE.md. Everything is editable data; this file only holds what differs from the reference look ('template_styles' always replaces the reference look's, here with none).",
   "_look": {
     "title": "Soft Editorial",
     "description": "Centred light-sans lines; key words in serif caps, bold glow, bold inline, warm bold, gold glow or serif italic. Blur-in words, letter-by-letter serif reveals.",
@@ -23,7 +23,12 @@
       "stroke": { "width": 0, "color": "#000000" },
       "shadow": { "enabled": true, "color": "#000000", "opacity": 0.35, "distance": 2, "softness": 8, "direction": 135 },
       "glow": { "enabled": false },
-      "anim": { "unit": "word", "duration": 0.26, "ease": "easeOut", "slide": [0, 46], "scale_from": 1, "opacity_from": 0, "blur_from": 14 }
+      "anim": { "unit": "word", "duration": 0.26, "ease": "easeOut", "slide": [0, 46], "scale_from": 1, "opacity_from": 0, "blur_from": 14,
+                "channels": {
+                  "opacity":  { "duration": 0.2,  "ease": "silkFade", "fit": "compress" },
+                  "blur":     { "duration": 0.32, "ease": "silkFade", "fit": "compress" },
+                  "position": { "duration": 1.0,  "ease": "silkMove", "fit": "cut" },
+                  "scale":    { "duration": 0.6,  "ease": "silkMove", "fit": "cut" } } }
     },
     "accent": {
       "font": "Satoshi-Bold", "font_fallbacks": ["NeueMontreal-Bold", "Poppins-Bold", "Arial-BoldMT"],
@@ -32,7 +37,12 @@
       "stroke": { "width": 0, "color": "#000000" },
       "shadow": { "enabled": true, "color": "#000000", "opacity": 0.35, "distance": 2, "softness": 8, "direction": 135 },
       "glow": { "enabled": false },
-      "anim": { "unit": "word", "duration": 0.26, "ease": "easeOut", "slide": [0, 46], "scale_from": 1, "opacity_from": 0, "blur_from": 14 },
+      "anim": { "unit": "word", "duration": 0.26, "ease": "easeOut", "slide": [0, 46], "scale_from": 1, "opacity_from": 0, "blur_from": 14,
+                "channels": {
+                  "opacity":  { "duration": 0.2,  "ease": "silkFade", "fit": "compress" },
+                  "blur":     { "duration": 0.32, "ease": "silkFade", "fit": "compress" },
+                  "position": { "duration": 1.0,  "ease": "silkMove", "fit": "cut" },
+                  "scale":    { "duration": 0.6,  "ease": "silkMove", "fit": "cut" } } },
       "variant_mode": "rotate",
       "variant_pool": [0, 1, 2, 3, 4, 5],
       "variants": [
@@ -41,7 +51,8 @@
           "font": "PlayfairDisplay-Regular", "font_fallbacks": ["BodoniModa-Regular", "LibreCaslonText-Regular", "TimesNewRomanPSMT"],
           "size": 115, "tracking": -10, "caps": "upper", "fill": "#FFFFFF", "line": "own", "fit_width": 0.62,
           "anim": { "unit": "letter", "duration": 0.17, "ease": "easeOut", "slide": [0, 0], "scale_from": 1, "opacity_from": 0, "blur_from": 0,
-                    "letters": { "stagger": 0.034, "duration": 0.17, "ease": "easeOut", "blur_from": 10, "opacity_from": 0, "rise": 10, "tint": "#E5B8C6", "tint_duration": 0.34, "max_total": 0.5 } }
+                    "letters": { "channels": { "opacity": { "ease": "silkFade" }, "blur": { "duration": 0.3, "ease": "silkFade" }, "rise": { "duration": 0.5, "ease": "silkMove" } },
+                                 "stagger": 0.034, "duration": 0.17, "ease": "easeOut", "blur_from": 10, "opacity_from": 0, "rise": 10, "tint": "#E5B8C6", "tint_duration": 0.34, "max_total": 0.5 } }
         },
         {
           "name": "Bold glow",
@@ -64,14 +75,16 @@
           "size": 86, "tracking": -25, "fill": "#FFF1B0", "line": "own",
           "glow": { "enabled": true, "color_a": "#FFC93C", "color_b": "#FFD86B", "radius": 20, "intensity": 0.95 },
           "anim": { "unit": "letter", "duration": 0.2, "ease": "easeOut", "slide": [0, 0], "scale_from": 1, "opacity_from": 0, "blur_from": 0,
-                    "letters": { "stagger": 0.04, "duration": 0.2, "ease": "easeOut", "blur_from": 12, "opacity_from": 0, "rise": 0, "tint": "", "tint_duration": 0, "max_total": 0.5 } }
+                    "letters": { "channels": { "opacity": { "ease": "silkFade" }, "blur": { "duration": 0.3, "ease": "silkFade" }, "rise": { "duration": 0.5, "ease": "silkMove" } },
+                                 "stagger": 0.04, "duration": 0.2, "ease": "easeOut", "blur_from": 12, "opacity_from": 0, "rise": 0, "tint": "", "tint_duration": 0, "max_total": 0.5 } }
         },
         {
           "name": "Serif italic (letter reveal)",
           "font": "PlayfairDisplay-Italic", "font_fallbacks": ["BodoniModa-Italic", "LibreCaslonText-Italic", "TimesNewRomanPS-ItalicMT"],
           "size": 110, "tracking": -10, "caps": "none", "fill": "#FFFFFF", "line": "own", "fit_width": 0.62,
           "anim": { "unit": "letter", "duration": 0.17, "ease": "easeOut", "slide": [0, 0], "scale_from": 1, "opacity_from": 0, "blur_from": 0,
-                    "letters": { "stagger": 0.04, "duration": 0.18, "ease": "easeOut", "blur_from": 10, "opacity_from": 0, "rise": 10, "tint": "#E5B8C6", "tint_duration": 0.34, "max_total": 0.5 } }
+                    "letters": { "channels": { "opacity": { "ease": "silkFade" }, "blur": { "duration": 0.3, "ease": "silkFade" }, "rise": { "duration": 0.5, "ease": "silkMove" } },
+                                 "stagger": 0.04, "duration": 0.18, "ease": "easeOut", "blur_from": 10, "opacity_from": 0, "rise": 10, "tint": "#E5B8C6", "tint_duration": 0.34, "max_total": 0.5 } }
         }
       ]
     }

@@ -1,17 +1,17 @@
 {
  "schema": "fcg.update",
- "version": "0.9.15",
- "released": "2026-11-11",
+ "version": "0.9.16",
+ "released": "2026-11-20",
  "notes": [
-  "Fix: Hinglish freezing on computers whose NVIDIA graphics card is missing its CUDA libraries (\"cublas64_12.dll is not found\"). The card was used anyway, the first speech model failed over to the processor, and the Hinglish model then froze. The app now checks for those libraries before it uses the card: if they are missing it uses the processor from the start (slower, but it finishes), and after any graphics-card failure it never tries the card again until the app is restarted.",
-  "Fix: the system check now notices a graphics card whose CUDA libraries are missing (it used to say \"GPU ready\") and offers \"Install the GPU libraries\".",
-  "New: every problem the Deep check finds has a Fix button, plus \"Fix everything found\" (graphics-card libraries, component repair, speech model download, Hinglish model rebuild). Run the Deep check again afterwards to confirm."
+  "Improved: **smoother entrance animation for the Soft Editorial look.** Fade, slide, blur and (for letter-by-letter words) rise now each run on their own length and curve, modelled on measurements of two professional smooth-text animations: a quick soft-start fade, and a slide that glides to rest over about one second instead of jumping most of its distance in the first frame. The look itself (fonts, colours, layout, sizes, travel distance) is unchanged, and every word still appears exactly when it is spoken, not a frame earlier.",
+  "Improved: section 7 shows the new fade / slide / blur / scale lengths for looks that use this motion, and the preview uses the same maths as After Effects.",
+  "New: a reusable \"silk\" motion recipe for future caption looks. The other looks are unchanged. Checked in After Effects 25.2 (keyframes and rendered frames match the preview maths); not yet checked in other After Effects versions."
  ],
  "min_python": "3.10",
  "app": {
-  "url": "releases/0.9.15/femegus-caption-gen-0.9.15.zip",
-  "sha256": "2a872c8286b5a29386c902f3ad659f89bc5b646ee23132d10cfb2e918df34577",
-  "size": 1295766,
+  "url": "releases/0.9.16/femegus-caption-gen-0.9.16.zip",
+  "sha256": "553b19fc0bca156dec70391db36a174004aaca2c2ded617a078bd9f0eb8a8609",
+  "size": 1306958,
   "requirements_sha256": "115e6368d5bf3a7074cc0fef1c37b2fc29fcc25091e4b884c76b90cf54310bd3"
  },
  "looks": [
@@ -37,7 +37,7 @@
    "name": "soft_editorial",
    "title": "Soft Editorial",
    "url": "looks/soft_editorial.json",
-   "sha256": "014ef447a1b2291c3208e21d5392b06119112d847d77adef3bd92c9df470f16d"
+   "sha256": "26a9fa0d1ab46140338364811c6141f0e6ae7dcc374f8fa29bc80937a80f40fd"
   }
  ]
 }
